@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love's Daring Chase</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+ 
+</head>
+<body>
+    <header>Love's Daring Chase</header>
+    <nav>
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about page.html" class="nav-link">About</a>
+        <a href="profile page.html" class="nav-link">Profiles</a>
+    </nav>
+    <div class="content">
+        <h2>Grace</h2>
+        <p class="poem">
+            Love moves soft, with hands so kind, <br>
+        A gentle touch, a heart that binds. <br>
+        It does not force, it does not break, <br>
+        But nurtures all for love’s own sake. <br><br>
+
+        With whispered words, it soothes the soul,<br>
+        A calming peace, that makes us whole.<br>
+        It lifts the fallen, and heals the pain,<br>
+        And brings hope to the heart, again and again.<br><br>
+        
+        
+        In love's embrace, we find our nest,<br>
+        A haven safe, where we can rest.<br>
+        It surrounds us, with its warmth and light,<br>
+        And fills our hearts, with pure delight.
+        
+        </p>
+    </div>
+    <div class="nav-button">
+        <a href="white.html">Previous</a>
+        <a href="poem.html">Back to poem</a>
+        <a href="chase.html">Next</a>
+    </div>
+    <div class="comment-section">
+        <h2>Leave a Comment</h2>
+        <form id="comment-form">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <textarea id="comment" placeholder="Write your comment..." required></textarea>
+            <button type="submit">Post Comment</button>
+        </form>
+        <div id="comments-container"></div>
+    </div>
+    
+    <script>
+        document.getElementById("comment-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+            
+            let name = document.getElementById("name").value;
+            let comment = document.getElementById("comment").value;
+            
+            if (name && comment) {
+                let commentData = { name, comment };
+                let comments = JSON.parse(localStorage.getItem("comments")) || [];
+                comments.push(commentData);
+                localStorage.setItem("comments", JSON.stringify(comments));
+                displayComments();
+                document.getElementById("comment-form").reset();
+            }
+        });
+        
+        function displayComments() {
+            let commentsContainer = document.getElementById("comments-container");
+            commentsContainer.innerHTML = "";
+            let comments = JSON.parse(localStorage.getItem("comments")) || [];
+            
+            comments.forEach(comment => {
+                let commentElement = document.createElement("div");
+                commentElement.classList.add("comment");
+                commentElement.innerHTML = `<strong>${comment.name}:</strong> <p>${comment.comment}</p>`;
+                commentsContainer.appendChild(commentElement);
+            });
+        }
+        
+        document.addEventListener("DOMContentLoaded", displayComments);
+    </script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"></script>    <script src="script.js" defer></script>
+    <footer>
+        © 2025 Group 1 RWS
+    </footer>
+</body>
+</html>
