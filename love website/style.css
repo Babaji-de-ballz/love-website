@@ -1,0 +1,197 @@
+/* Futuristic-Love Theme CSS */
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Montserrat:wght@400;700&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: radial-gradient(circle, #1a002a, #000);
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    overflow-x: hidden;
+    animation: backgroundAnimation 20s infinite alternate;
+    display: block;
+}
+
+@keyframes backgroundAnimation {
+    0% { background: radial-gradient(circle, #1a002a, #000); }
+    100% { background: radial-gradient(circle, #3a003a, #000); }
+}
+
+header {
+    font-family: 'Orbitron', sans-serif;
+    background: linear-gradient(90deg, #ff0080, #8000ff);
+    color: white;
+    padding: 20px;
+    font-size: 28px;
+    text-shadow: 0 0 10px #ff00ff;
+    border-bottom: 3px solid #ff00ff;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background: rgba(255, 0, 128, 0.2);
+    padding: 10px;
+    backdrop-filter: blur(10px);
+}
+
+.nav-link {
+    margin: 0 20px;
+    text-decoration: none;
+    color: #ff80ff;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+.nav-link:hover {
+    color: #ffffff;
+    text-shadow: 0 0 15px #ff00ff;
+}
+
+.content {
+    padding: 30px;
+    max-width: 800px;
+    margin: auto;
+    background: rgba(255, 0, 128, 0.1);
+    box-shadow: 0px 0px 20px rgba(255, 0, 255, 0.4);
+    border-radius: 10px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.poem-link {
+    color: #ff66ff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+.poem-link:hover {
+    color: #ffffff;
+    text-shadow: 0 0 15px #ff00ff;
+}
+
+footer {
+    background: linear-gradient(90deg, #ff0080, #8000ff);
+    color: white;
+    padding: 10px;
+    bottom: 0;
+    width: 100%;
+    text-shadow: 0 0 10px #ff00ff;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-10px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.poem-button{
+    display: block;
+    justify-content: center;
+    margin: 20px auto;
+    padding: 15px;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    width: 200px;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #ff0080, #8000ff);
+    box-shadow: 0 0 10px rgba(255, 0, 255, 0.5);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.poem-button:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(255, 0, 255, 0.7);
+}
+/* Navigation Button Styling */
+.nav-button {
+    display: block;
+    justify-content: center;
+    margin: 20px auto;
+    padding: 15px;
+}
+
+.nav-button a{
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    padding: 15px;
+    width: 200px;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #ff0080, #8000ff);
+    box-shadow: 0 0 10px rgba(255, 0, 255, 0.5);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.nav-button a:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(255, 0, 255, 0.7);
+}
+
+/* Comment Section Styling */
+.comment-section {
+    width: 80%;
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background: rgba(255, 0, 128, 0.1);
+    box-shadow: 0px 0px 15px rgba(255, 0, 255, 0.5);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.comment-section h2 {
+    color: #ff80ff;
+    text-shadow: 0 0 10px #ff00ff;
+}
+
+#comment-form input, #comment-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    background: #fff;
+    font-size: 16px;
+}
+
+#comment-form button {
+    background: linear-gradient(90deg, #ff0080, #8000ff);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+#comment-form button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(255, 0, 255, 0.7);
+}
+
+#comments-container {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.comment {
+    background: rgba(255, 0, 128, 0.2);
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px rgba(255, 0, 255, 0.5);
+}
+
+.comment strong {
+    color: #ff80ff;
+}
