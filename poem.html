@@ -9,7 +9,7 @@
  
 </head>
 <body>
-    <header>Love's Daring Chase</header>
+    <header>Love's Daring Chase</header>  
     <nav>
         <a href="index.html" class="nav-link">Home</a>
         <a href="about page.html" class="nav-link">About</a>
@@ -48,21 +48,20 @@
 <div class="comment-section">
     <h2>Leave a Comment</h2>
     <form id="comment-form">
-        <input type="text" id="name" placeholder="Your Name" required>
-        <textarea id="comment" placeholder="Write your comment... (Max 300 characters)" maxlength="300" required></textarea>
-        <button type="submit">Post Comment</button>
+        <input type="text" value="" id="name" placeholder="Your Name" required>
+        <input type="text" value="" id="grade-section" placeholder="Your Grade and section" required>
+        <input type="text" value="" id="strand" placeholder="Your strand" required>
+        <textarea id="comment" value="" placeholder="Write your comment... (Max 300 characters)" maxlength="300" required></textarea>
+        <button type="submit" value="submit">Post Comment</button>
     </form>
     <div id="comments-container"></div>
 </div>
 
 <!-- Firebase SDK -->
-<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"></script>
+<!-- Firebase SDK -->
+<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script>
 <script src="script.js" defer></script>
-
-<script>
-
-</script>
 
     <footer>
         © 2025 Group 1 RWS

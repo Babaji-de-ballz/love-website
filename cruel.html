@@ -51,40 +51,10 @@
         <div id="comments-container"></div>
     </div>
     
-    <script>
-        document.getElementById("comment-form").addEventListener("submit", function(event) {
-            event.preventDefault();
-            
-            let name = document.getElementById("name").value;
-            let comment = document.getElementById("comment").value;
-            
-            if (name && comment) {
-                let commentData = { name, comment };
-                let comments = JSON.parse(localStorage.getItem("comments")) || [];
-                comments.push(commentData);
-                localStorage.setItem("comments", JSON.stringify(comments));
-                displayComments();
-                document.getElementById("comment-form").reset();
-            }
-        });
-        
-        function displayComments() {
-            let commentsContainer = document.getElementById("comments-container");
-            commentsContainer.innerHTML = "";
-            let comments = JSON.parse(localStorage.getItem("comments")) || [];
-            
-            comments.forEach(comment => {
-                let commentElement = document.createElement("div");
-                commentElement.classList.add("comment");
-                commentElement.innerHTML = `<strong>${comment.name}:</strong> <p>${comment.comment}</p>`;
-                commentsContainer.appendChild(commentElement);
-            });
-        }
-        
-        document.addEventListener("DOMContentLoaded", displayComments);
-    </script>
-    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"></script>    <script src="script.js" defer></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script>
+    <script src="script.js" defer></script>
+    
     <footer>
         © 2025 Group 1 RWS
     </footer>

@@ -38,9 +38,19 @@
         <a href="poem.html">Back to poem</a>
         <a href="night.html">Next</a>
     </div>
-    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js"></script>
-<script src="script.js" defer></script>
+    <div class="comment-section">
+        <h2>Leave a Comment</h2>
+        <form id="comment-form">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <textarea id="comment" placeholder="Write your comment..." required></textarea>
+            <button type="submit">Post Comment</button>
+        </form>
+        <div id="comments-container"></div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script>
+    <script src="script.js" defer></script>
+    
     <footer>
         © 2025 Group 1 RWS
     </footer>

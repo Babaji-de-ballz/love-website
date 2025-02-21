@@ -14,7 +14,7 @@ body {
     display: block;
 }
 
-@keyframes backgroundAnimation {
+@keyframes backgroundAnimation {  
     0% { background: radial-gradient(circle, #1a002a, #000); }
     100% { background: radial-gradient(circle, #3a003a, #000); }
 }
